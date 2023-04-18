@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://app.onecompiler.com/3z5xqgw45_3z5zc3tjx/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <p class="para" id="ele_1"><b>H</b></p>
+      <p class="para">E</p>
+      <p class="para">L</p>
+      <p class="para">L</p>
+      <p class="para">O</p>
+    </div>
+      <button onclick="result()">Result</button>
+      
+      <script src="./script.js.download"></script>
+      <script>
+        
+        
+        var wrapper= document.getElementById("wrapper");
+        
+        
+        function result(){
+          var count_of_para= document.querySelectorAll(".para");
+          
+          var node= document.getElementById("wrapper").firstElementChild;
+          
+          
+          console.log("count:"+count_of_para.length);
+          
+          const clone = node.cloneNode(true);
+          
+          /* adding class name and id */
+          clone.setAttribute('class', 'para');
+          clone.setAttribute('id', 'ele_'+count_of_para.length);
+          
+          document.getElementById("wrapper").appendChild(clone);
+        }
+      </script>
+  
+</body></html>
